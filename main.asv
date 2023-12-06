@@ -104,7 +104,8 @@ function result = cartesian(IM, slines, spoints)
     % fourier transformed image
     FT = fftshift(fft2(IM2));
     F_mag = sqrt(real(FT).^2 + imag(FT).^2);
-    F_log = log(1 + FT);
+    F_log = round(log(1 + FT));
+    imwrite(F_log, "shepp-logan_fourier.jpg");
     %imshow(F_log, []);
     % sample k-space
     %smpl = interp2(FT, ,);
