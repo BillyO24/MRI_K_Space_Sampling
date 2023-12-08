@@ -1,7 +1,7 @@
 function main()
     %[IM1, IM2] = genTestImages();
     IM1 = phantom('Modified Shepp-Logan', 256);
-    IM1_C = radial(IM1, 200, 200);
+    IM1_C = radial(IM1, 100, 100);
 end
 
 
