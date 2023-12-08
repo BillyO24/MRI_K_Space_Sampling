@@ -1,7 +1,13 @@
 function main()
-    %[IM1, IM2] = genTestImages();
-    IM1 = phantom('Modified Shepp-Logan', 256);
-    IM1_C = radial(IM1, 200, 200);
+    [IM1, IM2] = genTestImages(); % generates both test phantom images
+    IM3 = imread('brain.jpg'); % medical image of brain
+    
+    %{ Uncomment the trajectory you wish to test %}
+    %{ Parameters: (image, number of lines, points per line %}
+    %IM4 = cartesian(IM1, 200, 200);
+    %IM4 = radial(IM1, 200, 200); 
+
+    imshow(IM4, []); % displays final reconstructed image in new window
 end
 
 
